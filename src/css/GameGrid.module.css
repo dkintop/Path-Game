@@ -1,0 +1,17 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+  grid-gap: 0px;
+  margin-top: 150px;
+  margin-left: 20%;
+}
+
+.cell {
+  padding: 5px;
+  border-style: solid;
+  border-color: grey;
+  border-width: 1px;
+  height: 1fr;
+  width: 1fr;
+}

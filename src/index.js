@@ -9,7 +9,7 @@ import rootReducer from "./redux-reducers/indexReducer.js";
 import thunk from "redux-thunk";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-console.log(rootReducer);
+
 let store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
 
 ReactDOM.render(
