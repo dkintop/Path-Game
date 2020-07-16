@@ -23,6 +23,11 @@ export default function GameController(
         ...state,
         startPos: action.payload,
       };
+    case "toggle game mode":
+      return {
+        ...state,
+        mode: action.payload,
+      };
     default:
       return state;
   }

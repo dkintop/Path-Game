@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styles from "../css/gameCell.module.css";
 import { connect } from "react-redux";
 import { setStartPosition } from "../redux-actions/gameActions.js";
+import { toggleGameMode } from "../redux-actions/gameActions";
 export class GameCell extends Component {
   constructor(props) {
     super(props);
@@ -10,7 +11,8 @@ export class GameCell extends Component {
 
   setStartPosition = () => {
     if (this.props.gameMode === "set start position") {
-      return this.props.setStartPosition(this.props.coords);
+      this.props.setStartPosition(this.props.coords);
+      this.props.toggleGameMode("record instructions");
     }
   };
 
@@ -32,7 +34,7 @@ export class GameCell extends Component {
     );
   }
 }
-//this is where we are at. we need to: 1.change background color of selected cell in starting position 2. dispatch action to update redux store of our starting position. 3. toggle a mode that will allow the user to set the start position, aka make a function that only works when i.e this.props.mode === "set start position"
+
 const mapStateToProps = (state) => {
   return {
     startPosition: state.gameController.startPos,
@@ -43,6 +45,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     setStartPosition: (coords) => dispatch(setStartPosition(coords)),
+    toggleGameMode: (mode) => dispatch(toggleGameMode(mode)),
   };
 };
 
