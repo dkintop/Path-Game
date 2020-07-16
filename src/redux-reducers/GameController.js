@@ -1,5 +1,10 @@
 export default function GameController(
-  state = { position_x: null, position_y: null, startPos: null },
+  state = {
+    position_x: null,
+    position_y: null,
+    startPos: null,
+    mode: "set start position",
+  },
   action
 ) {
   switch (action.type) {

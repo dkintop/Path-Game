@@ -1,8 +1,18 @@
-.cell {
+.emptyCell {
   padding: 5px;
   border-style: solid;
   border-color: grey;
   border-width: 1px;
   height: 1fr;
   width: 1fr;
+}
+
+.startPosition {
+  padding: 5px;
+  border-style: solid;
+  border-color: grey;
+  border-width: 1px;
+  height: 1fr;
+  width: 1fr;
+  background-color: yellow;
 }
