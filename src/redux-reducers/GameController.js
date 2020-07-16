@@ -8,16 +8,6 @@ export default function GameController(
   action
 ) {
   switch (action.type) {
-    case "left":
-      return {
-        position_x: state.position_x - 1,
-        ...state,
-      };
-    case "right":
-      return {
-        ...state,
-        position_x: state.position_x + 1,
-      };
     case "setStart":
       return {
         ...state,
