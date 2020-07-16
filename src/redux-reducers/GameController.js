@@ -1,5 +1,5 @@
 export default function GameController(
-  state = { position_x: null, position_y: null },
+  state = { position_x: null, position_y: null, startPos: null },
   action
 ) {
   switch (action.type) {
@@ -12,6 +12,11 @@ export default function GameController(
       return {
         ...state,
         position_x: state.position_x + 1,
+      };
+    case "setStart":
+      return {
+        ...state,
+        startPos: action.payload,
       };
     default:
       return state;
